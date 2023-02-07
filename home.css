@@ -1,0 +1,138 @@
+html, body {
+  height: 100%;
+  font-family: 'Futura', san-serif;
+}
+
+body { 
+  background-image: url("images/casevac.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #999;
+  color: #DEC56C;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  filter-direction:column;
+  /* background: #0e1538; */
+}
+a{
+  position: relative;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  margin: 40px;
+  text-decoration: none;
+  transition: 1s;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+a:hover{
+  background: var(--clr);
+  box-shadow: 0 0 10px var(--clr),
+              0 0 30px var(--clr),
+              0 0 60px var(--clr),
+              0 0 100px var(--clr);
+}
+a:before{
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 400%;
+  background: var(--clr);
+  transition: 1s;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.33s * var(--1));
+}
+a:hover:before{
+  width: 120%;
+}
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+a:after{
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #0e1538;
+}
+a:hover:after{
+  background: var(--clr);
+}
+a span{
+  position: relative;
+  z-index: 1;
+  font-size: 2em;
+  color: #fff;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  transition: 0.5s;
+}
+a:hover span{
+  opacity: 1;
+}
+h1 { 
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  padding: 1px;
+  font-family: 'Raleway', cursive;
+  font-weight: 100;
+  position: relative;
+  background: linear-gradient(to right, black, #eee, black);
+}
+
+.heading {
+  text-transform: uppercase;
+  position: relative;
+  background: #000000
+}
+
+.heading h1 {
+text-align: center;
+overflow: hidden;
+color: #fff;
+white-space: nowrap;
+text-overflow: ellipsis;
+font: 30px/32px 'Roboto', sans-serif;
+  padding: 100px 0;;
+}
+.heading h1:before,
+.heading h1:after {
+content: '';
+width: 100%;
+display: inline-block;
+border-bottom: 1px solid;
+height: 0;
+vertical-align: middle;
+}
+.heading h1:before {
+margin-left: -100%;
+margin-right: 80px;
+}
+.heading h1:after {
+margin-left: 80px;
+margin-right: -100%;
+}
